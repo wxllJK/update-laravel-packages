@@ -129,6 +129,8 @@ class UpdateCommand extends Command
                 'spatie/laravel-ignition' => '^2.0',
                 'laravel/passport' => '^11.0',
                 'laravel/ui' => '^4.0',
+                'phpunit/phpunit' => '^10.0',
+                'nunomaduro/collision' => '^7.0',
             ],
             '9' => [
                 'laravel/framework' => '^9.0',
