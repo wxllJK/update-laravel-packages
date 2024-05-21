@@ -1,6 +1,6 @@
 <?php
 
-namespace Wxlljk\LaravelComposerVersionUpdater;
+namespace Wxlljk\UpdateLaravelPackages;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -62,12 +62,16 @@ class UpdateCommand extends Command
         }
 
         file_put_contents($composerJsonPath, json_encode($composerData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+
         $io->info('composer.json has been updated with the following changes:');
         $io->listing($updatedPackages);
-        $io->info('You should replace the following packages:');
-        $io->listing(array_map(function($package, $newPackage) {
-            return '"' . $package . '" -> "' . $newPackage['package'] . '": "' . $newPackage['version'] . '"';
-        }, array_keys($sets['replacements']), $sets['replacements']));
+
+        if (count($sets['replacements'])) {
+            $io->info('You should replace the following packages:');
+            $io->listing(array_map(function($package, $newPackage) {
+                return '"' . $package . '" -> "' . $newPackage['package'] . '": "' . $newPackage['version'] . '"';
+            }, array_keys($sets['replacements']), $sets['replacements']));
+        }
 
         return Command::SUCCESS;
     }

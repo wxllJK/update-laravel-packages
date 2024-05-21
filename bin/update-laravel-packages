@@ -4,7 +4,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Wxlljk\LaravelComposerVersionUpdater\UpdateCommand;
+use Wxlljk\UpdateLaravelPackages\UpdateCommand;
 
 $application = new Application();
 $application->add(new UpdateCommand());

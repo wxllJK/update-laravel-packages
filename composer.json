@@ -1,15 +1,15 @@
 {
-    "name": "wxlljk/laravel-composer-version-updater",
+    "name": "wxlljk/update-laravel-packages",
     "description": "Update composer.json with the updates from the Laravel upgrade guide",
     "type": "library",
     "version": "1.0",
     "autoload": {
         "psr-4": {
-            "Wxlljk\\LaravelComposerVersionUpdater\\": "src/"
+            "Wxlljk\\UpdateLaravelPackages\\": "src/"
         }
     },
     "bin": [
-        "bin/upgrade-laravel-packages"
+        "bin/update-laravel-packages"
     ],
     "authors": [
         {
