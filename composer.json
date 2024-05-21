@@ -3,7 +3,7 @@
     "description": "Update composer.json with the updates from the Laravel upgrade guide",
     "license": "MIT",
     "type": "library",
-    "version": "1.0",
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "Wxlljk\\UpdateLaravelPackages\\": "src/"
