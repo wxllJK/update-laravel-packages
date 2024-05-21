@@ -1,6 +1,7 @@
 {
     "name": "wxlljk/update-laravel-packages",
     "description": "Update composer.json with the updates from the Laravel upgrade guide",
+    "license": "MIT",
     "type": "library",
     "version": "1.0",
     "autoload": {
